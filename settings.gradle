@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Mobdev_StudentApps_W3"

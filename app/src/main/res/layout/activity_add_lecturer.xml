@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLecturer">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_addLect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#002A2A72"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/lecturer_menu" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_addLecturer_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:tint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <EditText
+        android:id="@+id/editText_addLecturer_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Lecturer Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_addLect" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_addLecturer_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/editText_addLecturer_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_addLecturer_name">
+
+        <RadioButton
+            android:id="@+id/radio_addLecturer_gender_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radio_addLecturer_gender_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editText_addLecturer_expert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Lecturer Expertise"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_addLecturer_name"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_addLecturer_gender"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_addLecturer_gender" />
+
+    <Button
+        android:id="@+id/btn_addLecturer_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Add Lecturer"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_addLecturer_expert"
+        app:layout_constraintStart_toStartOf="@+id/editText_addLecturer_expert" />
+
+    <TextView
+        android:id="@+id/tb_title_lectadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Title"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgbtn_addLecturer_back"
+        app:layout_constraintStart_toEndOf="@+id/imgbtn_addLecturer_back"
+        app:layout_constraintTop_toTopOf="@+id/imgbtn_addLecturer_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

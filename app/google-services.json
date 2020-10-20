@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1018241225894",
+    "firebase_url": "https://studentapps-mobdev.firebaseio.com",
+    "project_id": "studentapps-mobdev",
+    "storage_bucket": "studentapps-mobdev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018241225894:android:1fedd3d62de8897cbdd067",
+        "android_client_info": {
+          "package_name": "com.uc.mobdev_studentapps_w3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018241225894-oiacns5cg76p5c66jofe3j0r8qdvrht8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uc.mobdev_studentapps_w3",
+            "certificate_hash": "5216524ae4e8f2de8d59c242535d514915b0239a"
+          }
+        },
+        {
+          "client_id": "1018241225894-932ag557si3i1vacqlto61rmobrc9k30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPhopTAB44HnPSfoftBuzzwnDgjLWJaGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018241225894-932ag557si3i1vacqlto61rmobrc9k30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

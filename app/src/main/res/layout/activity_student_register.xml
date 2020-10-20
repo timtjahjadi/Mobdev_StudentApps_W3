@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentRegister">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_studentRegister_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarStudent" />
+
+    <EditText
+        android:id="@+id/editText_studentRegister_pass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editText_studentRegister_email"
+        app:layout_constraintStart_toStartOf="@+id/editText_studentRegister_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_studentRegister_email" />
+
+    <EditText
+        android:id="@+id/editText_studentRegister_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_studentRegister_pass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_studentRegister_pass" />
+
+    <EditText
+        android:id="@+id/editText_studentRegister_nim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="NIM"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editText_studentRegister_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_studentRegister_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_studentRegister_name" />
+
+    <RadioGroup
+        android:id="@+id/radio_studentRegister_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/editText_studentRegister_nim"
+        app:layout_constraintTop_toBottomOf="@+id/editText_studentRegister_nim">
+
+        <RadioButton
+            android:id="@+id/radio_studentRegister_gender_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radio_studentRegister_gender_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editText_studentRegister_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="age"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editText_studentRegister_nim"
+        app:layout_constraintStart_toStartOf="@+id/radio_studentRegister_gender"
+        app:layout_constraintTop_toBottomOf="@+id/radio_studentRegister_gender" />
+
+    <EditText
+        android:id="@+id/editText_studentRegister_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="address"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_studentRegister_age"
+        app:layout_constraintStart_toStartOf="@+id/editText_studentRegister_age"
+        app:layout_constraintTop_toBottomOf="@+id/editText_studentRegister_age" />
+
+    <Button
+        android:id="@+id/btn_studentRegister_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorPrimary"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_studentRegister_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:tint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <TextView
+        android:id="@+id/tb_stud_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Title"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgbtn_studentRegister_back"
+        app:layout_constraintStart_toEndOf="@+id/imgbtn_studentRegister_back"
+        app:layout_constraintTop_toTopOf="@+id/imgbtn_studentRegister_back" />
+</androidx.constraintlayout.widget.ConstraintLayout>

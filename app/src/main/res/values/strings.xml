@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mobdev_StudentApps_W3</string>
+    <string name="tb_lect_title">Lecturer Data</string>
+    <string name="lect_list">Lecturer List</string>
+    <string name="Nim">NIM</string>
+    <string name="Email">Email</string>
+    <string name="studentMenu">Student Menu</string>
+    <string name="mySchedule">My Schedule</string>
+    <string name="course">Courses</string>
+    <string name="myacc">My Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
