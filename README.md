@@ -9,3 +9,5 @@ Features:
 - Edit & Delete Lecturer
 - Login using email and password
 - Save current user
+
+Demo Video : https://youtu.be/z7LWyrkDXtg
