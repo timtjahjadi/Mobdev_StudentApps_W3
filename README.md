@@ -9,5 +9,7 @@ Features:
 - Edit & Delete Lecturer
 - Login using email and password
 - Save current user
-
-Demo Video : https://youtu.be/z7LWyrkDXtg
+- Adding Course
+- Edit & Delete Course
+- Enroll to Course
+- Remove Course from Schedule
