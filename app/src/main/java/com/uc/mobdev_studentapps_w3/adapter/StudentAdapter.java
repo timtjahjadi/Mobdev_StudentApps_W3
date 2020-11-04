@@ -18,6 +18,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.EmailAuthProvider;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -92,7 +99,8 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.CardView
                                         db_student.child(holder.uid).removeValue(new DatabaseReference.CompletionListener() {
                                             @Override
                                             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                                Toast.makeText(v.getContext(), "Delete Success!", Toast.LENGTH_SHORT);
+                                                deleteUser(student.getEmail(), student.getPassword(), v);
+//                                                Toast.makeText(v.getContext(), "Delete Success!", Toast.LENGTH_SHORT);
                                                 dialogInterface.cancel();
                                             }
                                         });
@@ -122,6 +130,18 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.CardView
         });
     }
 
+    public void deleteUser(String email, String pass, final View v) {
+        final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+        mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                Toast.makeText(v.getContext(), "Delete Success!", Toast.LENGTH_SHORT);
+                FirebaseUser user = mAuth.getCurrentUser();
+                user.delete();
+            }
+        });
+    }
     @Override
     public int getItemCount() {
         return getListStudent().size();

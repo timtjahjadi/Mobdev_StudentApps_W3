@@ -98,6 +98,14 @@ public class MyAccountFragment extends Fragment {
                                         public void run() {
 //                                        dialog.cancel();
                                             SharedPreferences.Editor editor = preferences.edit();
+                                            editor.putString("id", "");
+                                            editor.putString("UserName", "");
+                                            editor.putString("UserNim", "");
+                                            editor.putString("UserEmail", "");
+                                            editor.putString("UserPass", "");
+                                            editor.putString("UserGender", "");
+                                            editor.putString("UserAge", "");
+                                            editor.putString("UserAddress", "");
                                             editor.putBoolean("isLogin", false);
                                             editor.commit();
                                             Intent intent = new Intent(getActivity(), MainActivity.class);

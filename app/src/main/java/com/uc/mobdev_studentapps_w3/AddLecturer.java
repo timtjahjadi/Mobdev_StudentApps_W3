@@ -56,7 +56,6 @@ public class AddLecturer extends AppCompatActivity {
         bar = findViewById(R.id.tb_addLect);
         setSupportActionBar(bar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         getSupportActionBar().setTitle("");
 

@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCourse.class);
+                intent.putExtra("action", "add");
                 startActivity(intent);
             }
         });
